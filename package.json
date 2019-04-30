@@ -1,0 +1,19 @@
+{
+  "name": "xtal-split",
+  "version": "0.0.0",
+  "description": "Split text",
+  "main": "xtal-split.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bahrus/xtal-split.git"
+  },
+  "author": "anderson.bruce.b@gmail.com",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/bahrus/xtal-split/issues"
+  },
+  "homepage": "https://github.com/bahrus/xtal-split#readme"
+}
