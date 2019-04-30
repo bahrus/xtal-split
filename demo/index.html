@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=yes">
+
+    <title>xtal-splitting demo</title>
+  </head>
+  <body>
+    <div>
+      <h3>Basic xtal-splitting demo</h3>
+      <style>
+        .match{
+          background-color: yellowgreen;
+          font-weight: bold;
+        }
+      </style>
+      <input type="text"  value="ca">
+      <!-- pass down (p-d) input.value to xtal-split's search property -->
+      <p-d on="input" prop="search" val="target.value"></p-d>
+      <xtal-split>supercalifragilisticexpialidocious</xtal-split>
+      <script type="module" src="https://unpkg.com/p-d.p-u@0.0.114/p-d.js?module"></script>
+      <script type="module" src="https://unpkg.com/xtal-splitting@0.0.10/xtal-split.js?module"></script>
+    </div>
+  </body>
+</html>
