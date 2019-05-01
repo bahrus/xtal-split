@@ -8,9 +8,7 @@
   </head>
   <body>
     <div>
-      <script src="https://unpkg.com/@webcomponents/webcomponentsjs/webcomponents-loader.js"></script>
-      <script type="module" src="https://unpkg.com/p-d.p-u@0.0.105/p-d.js?module"></script>
-      <script type="module" src="../xtal-split.js"></script>
+      <xtal-sip selector="[data-imp]"></xtal-sip>
       <h3>Basic xtal-splitting demo</h3>
       <style>
         .match{
@@ -20,8 +18,25 @@
       </style>
       <input type="text"  value="ca">
       <!-- pass down (p-d) input.value to xtal-split's search property -->
-      <p-d on="input" prop="search" val="target.value"></p-d>
-      <xtal-split>superc<span>alifragil</span>isticexpialidocious</xtal-split>
+      <p-d on="input" prop="search" val="target.value" data-imp></p-d>
+      <xtal-split data-imp>superc<span>alifragil</span>isticexpialidocious</xtal-split>
+
+      <!-- Use experimental import maps -->
+      <script defer src="https://cdn.jsdelivr.net/npm/es-module-shims@0.2.0/dist/es-module-shims.js"></script>
+      <script type="importmap-shim">
+        {
+          "imports": {
+            "xtal-element/":            "https://cdn.jsdelivr.net/npm/xtal-element@0.0.58/",
+            "trans-render/":            "https://cdn.jsdelivr.net/npm/trans-render@0.0.110/",
+            "xtal-sip/xtal-sip.js":     "https://cdn.jsdelivr.net/npm/xtal-sip@0.0.68/xtal-sip.js",
+            "p-d/p-d.js":               "https://cdn.jsdelivr.net/npm/p-d.p-u@0.0.119/p-d.js",
+            "xtal-split/xtal-split.js": "../xtal-split.js"
+          }
+        }
+        </script>
+      <script  type="module-shim">
+        import 'xtal-sip/xtal-sip.js';
+      </script>
     </div>
   </body>
 </html>
