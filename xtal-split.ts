@@ -1,6 +1,6 @@
 import {XtallatX} from 'xtal-element/xtal-latx.js';
 import {define} from 'trans-render/define.js';
-import {hydrate, up} from 'trans-render/hydrate.js';
+import {hydrate} from 'trans-render/hydrate.js';
 
 const search = 'search';
 const text_content = 'text-content';
@@ -57,7 +57,7 @@ export class XtalSplit extends XtallatX(hydrate(HTMLElement)) {
     _connected : boolean;
     connectedCallback(){
         this._connected = true;
-        this[up](['search', 'textContent']);
+        this.propUp(['search', 'textContent']);
         this.onPropsChange();
     }
     onPropsChange() {
